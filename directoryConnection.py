@@ -1,14 +1,18 @@
+import os
 import ssl
 
+from dotenv import load_dotenv
 from ldap3 import Server, Connection, ALL, Tls
+
+load_dotenv()
 
 # -----------------------------
 # LDAP Server Details
 # -----------------------------
-LDAP_HOST = "192.168.1.6"
-LDAP_PORT = 636
-LDAP_USER = "cn=admin,ou=sa,o=system"
-LDAP_PASSWORD = "t6D%pl37"
+LDAP_HOST = os.getenv("LDAP_HOST")
+LDAP_PORT = int(os.getenv("LDAP_PORT", "636"))
+LDAP_USER = os.getenv("LDAP_USER")
+LDAP_PASSWORD = os.getenv("LDAP_PASSWORD")
 
 tls_config = Tls(
     validate=ssl.CERT_NONE,  # test only
