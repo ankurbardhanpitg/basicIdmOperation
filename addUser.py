@@ -3,10 +3,10 @@ from directoryConnection import get_ldap_connection
 # -----------------------------
 # New User Details
 # -----------------------------
-USERNAME = "jdoedddd"
-FULL_NAME = "John Doe"
-SURNAME = "Doe"
-GIVEN_NAME = "John"
+USERNAME = "testankurprog1"
+FULL_NAME = "Ankur Programmer"
+SURNAME = "Programmer"
+GIVEN_NAME = "Ankur"
 USER_PASSWORD = "Welcome@123"
 USER_DN = f"cn={USERNAME},ou=Active,ou=Users,ou=Ankur,o=QuickTraining"
 
